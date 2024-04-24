@@ -43,7 +43,7 @@ public class Check {
                 }
             }
             myReader.close();
-            System.out.println("Donecar");
+            System.out.println("Done");
         } catch (FileNotFoundException e) {
             // handle file not found exception
             System.out.println("File not found: " + filename);
