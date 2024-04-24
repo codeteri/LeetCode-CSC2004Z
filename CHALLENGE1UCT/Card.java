@@ -12,16 +12,18 @@ public class Card {
   }
 
   public boolean equals(Object obj){
-    if (this==obj){
-      return true;
+    if (this == obj) {
+        return true;  // Check if it's the same object
     }
-    if (obj== null || getClass() != obj.getClass()) {
-      return false;
+    if (!(obj instanceof Card)) {
+        return false;  // Check if obj is null or belongs to a different class
     }
-    Card otherCard = (Card) obj;
+    Card otherCard = (Card) obj;  // Cast obj to Card
 
+    // Compare attributes using Objects.equals() method
     return Objects.equals(shape, otherCard.shape) &&
             Objects.equals(colour, otherCard.colour) && 
-              Objects.equals(pattern, otherCard.pattern);
+            Objects.equals(pattern, otherCard.pattern);
   }
+
 }
